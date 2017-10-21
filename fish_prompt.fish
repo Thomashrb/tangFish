@@ -40,12 +40,12 @@ function show_user -d "Show user"
   if not contains $USER $default_user; or test -n "$SSH_CLIENT"
     set -l host (hostname -s)
     set -l who (whoami)
-    prompt_segment normal yellow " $who"
+    prompt_segment normal green " $who"
 
     # Skip @ bit if hostname == username
     if [ "$USER" != "$HOST" ]
-      prompt_segment normal white "@"
-      prompt_segment normal green "$host "
+      prompt_segment normal whire "@"
+      prompt_segment normal white "$host "
       set pad ""
     end
   end
